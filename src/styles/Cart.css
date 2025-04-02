@@ -1,57 +1,204 @@
-/* Cart container */
 .cart-container {
-    padding: 2rem;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Cart title */
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+  color: black; /* Ensures default text is black in light mode */
+}
+
+.cart-container.dark {
+  background-color: #222;
+  color: white; /* Default text color in dark mode */
+}
+
+/* Ensuring headings are visible in both modes */
+.cart-container h1, 
+.cart-container h3 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cart-container h1 {
+  font-size: 26px;
+}
+
+.cart-container h3 {
+  font-size: 18px;
+  text-align: right;
+  margin-top: 15px;
+}
+
+.cart-container.dark h1, 
+.cart-container.dark h3 {
+  color: white !important; /* Ensures headings are visible */
+}
+
+/* Ensuring list items are visible */
+.cart-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  color: black; /* Default color for light mode */
+}
+
+.cart-container.dark li {
+  border-bottom: 1px solid #444; /* Lighter border for dark mode */
+  color: white; /* Ensures list items are readable */
+}
+
+/* Fixing car name and price visibility */
+.car-name {
+  color: black;
+}
+
+.cart-container.dark .car-name {
+  color: white !important; /* White text in dark mode */
+}
+
+.car-price {
+  color: #333;
+}
+
+.cart-container.dark .car-price {
+  color: white !important;
+}
+
+/* Styling buttons */
+.cart-container button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.cart-container button:hover {
+  background-color: #b71c1c;
+}
+
+.cart-container.dark button {
+  background-color: #ff5252;
+}
+
+.cart-container.dark button:hover {
+  background-color: #ff1744;
+}
+
+/* Back button styling */
+.cart-container .back-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.cart-container .back-button:hover {
+  background-color: #0056b3;
+}
+
+.cart-container.dark .back-button {
+  background-color: #4a90e2;
+}
+
+.cart-container.dark .back-button:hover {
+  background-color: #357ac9;
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
   .cart-title {
     font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
   }
-  
-  /* Cart card */
+ 
   .cart-card {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
   }
-  
-  /* Cart body */
-  .cart-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 0;
-  }
-  
-  /* Cart icon */
+ 
   .cart-icon {
-    height: 4rem;
-    width: 4rem;
-    margin-bottom: 1rem;
-    color: #6b7280;
+    height: 3.5rem;
+    width: 3.5rem;
   }
-  
-  /* Empty cart text */
+}
+ 
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 1.5rem;
+  }
+ 
+  .cart-title {
+    font-size: 1.8rem;
+  }
+ 
+  .cart-card {
+    padding: 1.2rem;
+  }
+ 
+  .cart-icon {
+    height: 3rem;
+    width: 3rem;
+  }
+ 
   .empty-cart-text {
-    font-size: 1.25rem;
-    color: #4b5563;
+    font-size: 1.1rem;
   }
-  
-  /* Dark mode styles */
-  body.dark-mode .cart-card {
-    background-color: #2d3748;
+ 
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
   }
-  
-  body.dark-mode .cart-title,
-  body.dark-mode .empty-cart-text {
-    color: #f9fafb;
+}
+ 
+.car-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive Grid */
+  gap: 1rem;
+}
+ 
+@media (max-width: 480px) {
+  .cart-title {
+    font-size: 1.5rem;
   }
-  
-  body.dark-mode .cart-icon {
-    color: #e2e8f0;
+ 
+  .cart-card {
+    padding: 1rem;
   }
-  
+ 
+  .cart-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+ 
+  .empty-cart-text {
+    font-size: 1rem;
+  }
+}
+ 
+@media (max-width: 600px) {
+  .car-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+ 

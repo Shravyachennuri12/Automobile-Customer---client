@@ -54,4 +54,60 @@
   body.dark-mode .bell-icon {
     color: #e2e8f0;
   }
-  
+  /* Responsive Design */
+@media (max-width: 1024px) {
+  .notifications-title {
+    font-size: 2rem;
+  }
+ 
+  .notifications-card {
+    padding: 1.5rem;
+  }
+ 
+  .bell-icon {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+ 
+@media (max-width: 768px) {
+  .notifications-container {
+    padding: 1.5rem;
+  }
+ 
+  .notifications-title {
+    font-size: 1.8rem;
+  }
+ 
+  .notifications-card {
+    padding: 1.2rem;
+  }
+ 
+  .bell-icon {
+    height: 3rem;
+    width: 3rem;
+  }
+ 
+  .no-notifications-text {
+    font-size: 1.1rem;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .notifications-title {
+    font-size: 1.5rem;
+  }
+ 
+  .notifications-card {
+    padding: 1rem;
+  }
+ 
+  .bell-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+ 
+  .no-notifications-text {
+    font-size: 1rem;
+  }
+}

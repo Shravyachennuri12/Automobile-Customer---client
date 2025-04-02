@@ -1,0 +1,246 @@
+/* .cars-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex; 
+  gap: 20px; 
+  align-items: flex-start; 
+}
+
+.cars-container h1 {
+  width: 100%;
+  text-align: center;
+  color: #333;
+}
+
+.cars-content {
+  flex: 2; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.car-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.car-card:hover {
+  transform: scale(1.05);
+}
+
+.car-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cars-container button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cars-container button:hover {
+  background-color: darkgreen;
+}
+
+.location-selection {
+  flex: 1;
+  max-width: 250px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #eef;
+  margin-top: 100px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #007BFF;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+select:focus {
+  border-color: #0056b3;
+} */
+
+
+
+
+/* Default Light Mode */
+.cars-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+
+
+}
+
+.dark-mode .cars-container {
+  color: var(--text-dark);
+}
+
+.cars-container h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.cars-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.car-card {
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 15px;
+  background-color: var(--card-bg-light);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.dark-mode .car-card {
+  background-color: var(--card-bg-dark);
+  border-color: var(--border-dark);
+  box-shadow: 0 4px 8px white;
+}
+
+
+
+.car-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cars-container button {
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cars-container button:hover {
+  background-color: darkgreen;
+}
+
+/* Dark Mode for Button */
+/* .dark-mode .cars-container button {
+  background-color: var(--btn-dark);
+} */
+
+.location-selection {
+  flex: 1;
+  max-width: 250px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--bg-light);
+  margin-top: 100px;
+  transition: background-color 0.3s;
+}
+
+
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #007BFF;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.dark-mode select {
+  /* background-color: var(--card-bg-dark); */
+  color: var(--text-dark);
+  border: 2px solid #0056b3;
+}
+
+select:focus {
+  border-color: #0056b3;
+}
+/* Responsive Design */
+
+/* 📱 Small Screens (max-width: 600px) */
+@media (max-width: 600px) {
+  .cars-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .cars-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .location-selection {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* 📲 Tablets (max-width: 900px) */
+@media (max-width: 900px) {
+  .cars-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cars-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* 🖥️ Large Screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .cars-container {
+    max-width: 1200px;
+    margin: auto;
+  }
+}

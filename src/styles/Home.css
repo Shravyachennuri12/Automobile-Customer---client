@@ -36,6 +36,7 @@
   .hero-title {
     font-size: 3rem;
     font-weight: bold;
+    color: white;
   }
   
   .hero-description {
@@ -43,7 +44,7 @@
     margin-bottom: 1.5rem;
   }
   
-  .hero-button {
+  /* .hero-button {
     background-color: #3182ce;
     color: white;
     padding: 1rem 2rem;
@@ -55,7 +56,43 @@
   
   .hero-button:hover {
     background-color: #2b6cb0;
+  } */
+
+  .hero-button {
+    background-color: #3182ce;
+    color: white !important; /* Ensures the text stays white */
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none; /* Prevents link underline */
+    border: none;
+    outline: none;
   }
+  
+  .hero-button:hover {
+    background-color: #2b6cb0;
+  }
+  
+  .hero-button:active,
+  .hero-button:focus,
+  .hero-button:visited {
+    background-color: #265a8f !important; /* Darker blue on click */
+    color: white !important; /* Prevents red color */
+    outline: none !important;
+    border: none !important;
+    text-decoration: none !important;
+  }
+  a {
+    color: white !important;
+  }
+  a:visited, a:focus, a:active {
+    color: white !important;
+    text-decoration: none !important;
+  }
+  
+  
 
    .grid-section {
     display: grid;
@@ -103,3 +140,86 @@
     color: #e2e8f0; 
   }
   
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .home-title {
+    font-size: 2rem;
+  }
+ 
+ 
+  .hero-title {
+    font-size: 2.5rem;
+  }
+ 
+  .hero-description {
+    font-size: 1.1rem;
+  }
+ 
+  .grid-section {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 1.5rem;
+  }
+}
+ 
+ 
+@media (max-width: 768px) {
+ 
+  .hero {
+    padding: 1rem;
+  }
+ 
+  .hero h1 {
+    font-size: 1.5rem; /* Decrease text size */
+  }
+ 
+  .hero button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+ 
+  .home-title {
+    font-size: 1.8rem;
+  }
+ 
+  .home-description {
+    font-size: 1rem;
+  }
+ 
+  .hero-title {
+    font-size: 2rem;
+  }
+ 
+  .hero-description {
+    font-size: 1rem;
+  }
+ 
+  .grid-section {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    padding: 1rem;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 1.5rem;
+  }
+ 
+  .home-description {
+    font-size: 0.9rem;
+  }
+ 
+  .hero-title {
+    font-size: 1.8rem;
+  }
+ 
+  .hero-description {
+    font-size: 0.9rem;
+  }
+ 
+  .grid-section {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+  }
+}
+ 
